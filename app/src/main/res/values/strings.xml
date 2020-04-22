@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WoltList</string>
+    <string name="restaurant_image">restaurant image</string>
 </resources>
