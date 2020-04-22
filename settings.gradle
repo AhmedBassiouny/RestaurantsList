@@ -1,0 +1,2 @@
+rootProject.name='WoltList'
+include ':app'
