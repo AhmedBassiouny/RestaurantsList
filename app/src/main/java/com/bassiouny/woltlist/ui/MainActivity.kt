@@ -9,7 +9,7 @@ import io.reactivex.schedulers.Schedulers
 
 class MainActivity : BaseActivity<RestaurantsPresenter>(), RestaurantsView {
 
-    private var clinet = Client()
+    private var client = Client()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +22,7 @@ class MainActivity : BaseActivity<RestaurantsPresenter>(), RestaurantsView {
             this,
             AndroidSchedulers.mainThread(),
             Schedulers.io(),
-            clinet.getService()
+            client.getService()
         )
     }
 }
