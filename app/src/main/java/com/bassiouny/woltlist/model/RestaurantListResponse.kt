@@ -5,9 +5,15 @@ data class RestaurantListResponse(
 )
 
 data class Restaurant(
-    val short_description: List<Description>
+    val short_description: List<Description>,
+    val name: List<Name>,
+    val mainimage: String
 )
 
 data class Description(
+    val value: String
+)
+
+data class Name(
     val value: String
 )
