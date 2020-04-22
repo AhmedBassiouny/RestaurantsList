@@ -20,7 +20,7 @@ class RestaurantsPresenter(
         restaurantsInteractor.getRestaurants(mainThread, io, service)
             ?.subscribe(
                 {
-                    Log.d("response", "success")
+                    view.updateList(it.results)
                 },
                 {
                     Log.d("response", "fail")
