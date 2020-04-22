@@ -1,8 +1,7 @@
 package com.bassiouny.woltlist.network
 
+import com.bassiouny.woltlist.model.RestaurantListResponse
 import io.reactivex.Observable
-import org.json.JSONObject
-import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -11,5 +10,5 @@ interface WoltApi {
     fun FeatchNearByRestaurants(
         @Query("lat") lat: Double,
         @Query("lon") lon: Double
-    ): Observable<Response<JSONObject>>
+    ): Observable<RestaurantListResponse>
 }
