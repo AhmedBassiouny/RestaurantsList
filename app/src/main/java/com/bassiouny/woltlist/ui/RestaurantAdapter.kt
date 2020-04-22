@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bassiouny.woltlist.R
@@ -42,10 +43,8 @@ class RestaurantAdapter(
     }
 }
 
-class RestaurantViewHolder(val item: View) : RecyclerView.ViewHolder(item) {
-    var name = item.restaurantName
+class RestaurantViewHolder(item: View) : RecyclerView.ViewHolder(item) {
+    var name: TextView = item.restaurantName
     var description: TextView = item.restaurantShortDescription
-    var image = item.restaurantImageView
+    var image: ImageView = item.restaurantImageView
 }
-
-
