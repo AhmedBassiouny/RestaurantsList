@@ -12,6 +12,6 @@ class MainActivity : BaseActivity<RestaurantsPresenter>(), RestaurantsView {
     }
 
     override fun instantiatePresenter(): RestaurantsPresenter {
-        TODO("Not yet implemented")
+        return RestaurantsPresenter(this)
     }
 }
