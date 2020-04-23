@@ -9,10 +9,11 @@ class RestaurantsInteractor {
     fun getRestaurants(
         mainThread: Scheduler,
         io: Scheduler,
-        api: WoltApi
-    ): Observable<RestaurantListResponse>? {
+        api: WoltApi,
+        latLon: Pair<String, String>
+    ): Observable<RestaurantListResponse> {
 
-        return api.featchNearByRestaurants(60.170187, 24.930599)
+        return api.featchNearByRestaurants(latLon.first, latLon.second)
             .observeOn(mainThread)
             .subscribeOn(io)
     }

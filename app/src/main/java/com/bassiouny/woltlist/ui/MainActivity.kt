@@ -49,4 +49,9 @@ class MainActivity : BaseActivity<RestaurantsPresenter>(), RestaurantsView {
     override fun updateList(restaurants: List<Restaurant>) {
         viewAdapter.updateData(restaurants as ArrayList<Restaurant>)
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.onViewDestroyed()
+    }
 }

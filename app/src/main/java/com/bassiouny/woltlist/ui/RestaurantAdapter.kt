@@ -29,8 +29,8 @@ class RestaurantAdapter(
     }
 
     override fun onBindViewHolder(holder: RestaurantViewHolder, position: Int) {
-        holder.name.text = fetchedRestaurants[position].name[0].value
-        holder.description.text = fetchedRestaurants[position].short_description[0].value
+        holder.name.text = fetchedRestaurants[position].name.first().value
+        holder.description.text = fetchedRestaurants[position].short_description.first().value
         Picasso.get().load(fetchedRestaurants[position].mainimage).into(holder.image)
     }
 
@@ -39,6 +39,7 @@ class RestaurantAdapter(
             clear()
             addAll(updatedRestaurants)
         }
+
         notifyDataSetChanged()
     }
 }
