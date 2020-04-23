@@ -46,7 +46,7 @@ class RestaurantsPresenter(
                         view.updateList(it.results)
                     },
                     {
-                        view.logError(it.message.toString())
+                        view.showErrorMessage()
                     }
                 )
         )

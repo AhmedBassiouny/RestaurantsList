@@ -51,7 +51,7 @@ class MainActivity : BaseActivity<RestaurantsPresenter>(), RestaurantsView {
         viewAdapter.updateData(restaurants as ArrayList<Restaurant>)
     }
 
-    override fun logError(error: String) {
+    override fun showErrorMessage() {
         Toast.makeText(this, getString(R.string.error_meesage), Toast.LENGTH_LONG).show()
         viewAdapter.updateData(ArrayList())
     }

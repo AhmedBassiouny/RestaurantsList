@@ -5,7 +5,7 @@ import com.bassiouny.woltlist.model.Restaurant
 
 interface RestaurantsView : BaseView {
     fun updateList(restaurants: List<Restaurant>)
-    fun logError(error: String)
+    fun showErrorMessage()
     fun showNoResults()
 
 

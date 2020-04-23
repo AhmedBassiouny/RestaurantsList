@@ -62,7 +62,7 @@ class ExampleUnitTest {
             idNotNull(restaurants.first())
         }
 
-        override fun logError(error: String) {
+        override fun showErrorMessage() {
             logErrorCounter++
         }
 
