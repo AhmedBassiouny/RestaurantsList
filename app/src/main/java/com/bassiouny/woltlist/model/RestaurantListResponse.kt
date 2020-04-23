@@ -5,6 +5,7 @@ data class RestaurantListResponse(
 )
 
 data class Restaurant(
+    val id: Map<String, String>,
     val short_description: List<Description>,
     val name: List<Name>,
     val mainimage: String
