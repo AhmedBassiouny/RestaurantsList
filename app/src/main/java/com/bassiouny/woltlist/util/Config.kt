@@ -1,7 +1,7 @@
 package com.bassiouny.woltlist.util
 
 const val BASE_URL = "https://restaurant-api.wolt.fi/v3/"
-const val REFRESH_RATE: Long = 10
+const val REFRESH_RATE: Long = 5
 val locations: List<Pair<String, String>> =
     listOf(
         Pair("60.170187", "24.930599"),

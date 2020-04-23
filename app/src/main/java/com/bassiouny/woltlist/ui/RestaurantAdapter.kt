@@ -45,7 +45,7 @@ class RestaurantAdapter(
     override fun onBindViewHolder(holder: RestaurantViewHolder, position: Int) {
         holder.name.text = fetchedRestaurants[position].name.first().value
         holder.description.text = fetchedRestaurants[position].short_description.first().value
-        Picasso.get().load(fetchedRestaurants[position].mainimage).into(holder.image)
+        Picasso.get().load(fetchedRestaurants[position].mainimage).placeholder(context.resources.getDrawable(R.drawable.response)).into(holder.image)
 
         holder.favIcon.tag = fetchedRestaurants[position].id["\$oid"]
         holder.favIcon.isLiked =

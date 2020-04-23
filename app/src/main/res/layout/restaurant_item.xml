@@ -18,39 +18,29 @@
         android:layout_height="match_parent"
         android:gravity="center_vertical">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/restaurantImageContainer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:elevation="10dp"
-            app:cardCornerRadius="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <ImageView
+            android:id="@+id/restaurantImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="@string/restaurant_image"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:id="@+id/restaurantImageView"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:contentDescription="@string/restaurant_image"
-                android:scaleType="fitXY"
-                tools:src="@drawable/ic_launcher_background" />
-        </androidx.cardview.widget.CardView>
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_launcher_background" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="12dp"
             android:orientation="vertical"
-            app:layout_constrainedWidth="true"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/favIc"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintRight_toLeftOf="@id/favIc"
-            app:layout_constraintStart_toEndOf="@+id/restaurantImageContainer"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/restaurantImageView">
 
             <TextView
                 android:id="@+id/restaurantName"
@@ -59,9 +49,9 @@
                 android:layout_marginBottom="5dp"
                 android:maxLines="1"
                 android:textColor="@android:color/black"
-                android:textSize="19sp"
+                android:textSize="17sp"
                 android:textStyle="bold"
-                tools:text="Social Joint Burger" />
+                tools:text="Social Joint Burger Social Joint Burger" />
 
             <TextView
                 android:id="@+id/restaurantShortDescription"
@@ -70,19 +60,23 @@
                 android:maxLines="1"
                 android:textColor="@android:color/black"
                 android:textSize="15sp"
-                tools:text="Tasty  make you smile" />
+                tools:text="Tasty  ma you smile" />
         </LinearLayout>
 
         <com.like.LikeButton
             android:id="@+id/favIc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
             app:anim_scale_factor="2"
+            app:icon_size="36dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/restaurantImageView"
             app:like_drawable="@drawable/ic_favorite_black_24dp"
             app:unlike_drawable="@drawable/ic_favorite_border_black_24dp"
             tools:background="@drawable/ic_favorite_border_black_24dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
+
+
