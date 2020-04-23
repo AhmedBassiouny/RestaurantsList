@@ -19,6 +19,10 @@ class RestaurantsPresenter(
     private val compositeDisposable = CompositeDisposable()
 
     override fun onViewCreated() {
+        periodicLocationChange()
+    }
+
+    fun periodicLocationChange() {
         compositeDisposable.add(Observable
             .interval(0, REFRESH_RATE, TimeUnit.SECONDS)
             .map { item ->
