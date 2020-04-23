@@ -1,7 +1,7 @@
 package com.bassiouny.woltlist.model
 
 data class RestaurantListResponse(
-    val results: List<Restaurant>
+    var results: List<Restaurant>
 )
 
 data class Restaurant(
