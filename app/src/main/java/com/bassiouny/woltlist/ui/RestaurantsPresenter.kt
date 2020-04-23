@@ -35,14 +35,18 @@ class RestaurantsPresenter(
         )
     }
 
-    private fun getRestaurants(latLon: Pair<String, String>) {
+    fun getRestaurants(latLon: Pair<String, String>) {
         compositeDisposable.add(
             restaurantsInteractor.getRestaurants(mainThread, io, service, latLon)
                 .subscribe(
                     {
+                        if (it.results.isEmpty()) {
+                            view.showNoResults()
+                        }
                         view.updateList(it.results)
                     },
                     {
+                        view.logError(it.message.toString())
                     }
                 )
         )

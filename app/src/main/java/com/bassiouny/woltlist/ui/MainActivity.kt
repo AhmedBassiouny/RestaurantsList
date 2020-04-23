@@ -1,6 +1,7 @@
 package com.bassiouny.woltlist.ui
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bassiouny.woltlist.R
@@ -48,6 +49,15 @@ class MainActivity : BaseActivity<RestaurantsPresenter>(), RestaurantsView {
 
     override fun updateList(restaurants: List<Restaurant>) {
         viewAdapter.updateData(restaurants as ArrayList<Restaurant>)
+    }
+
+    override fun logError(error: String) {
+        Toast.makeText(this, getString(R.string.error_meesage), Toast.LENGTH_LONG).show()
+        viewAdapter.updateData(ArrayList())
+    }
+
+    override fun showNoResults() {
+        Toast.makeText(this, getString(R.string.empty_list_message), Toast.LENGTH_LONG).show()
     }
 
     override fun onDestroy() {
