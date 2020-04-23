@@ -49,6 +49,10 @@ class RestaurantsPresenter(
     }
 
     override fun onViewDestroyed() {
+        compositeDisposable.dispose()
+    }
+
+    fun clearDisposeBag() {
         compositeDisposable.clear()
     }
 }

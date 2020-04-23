@@ -54,4 +54,14 @@ class MainActivity : BaseActivity<RestaurantsPresenter>(), RestaurantsView {
         super.onDestroy()
         presenter.onViewDestroyed()
     }
+
+    override fun onStart() {
+        super.onStart()
+        presenter.periodicLocationChange()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        presenter.clearDisposeBag()
+    }
 }
