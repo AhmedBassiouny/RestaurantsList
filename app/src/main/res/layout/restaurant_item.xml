@@ -70,6 +70,7 @@
             android:layout_marginEnd="5dp"
             app:anim_scale_factor="2"
             app:icon_size="36dp"
+            app:dots_secondary_color="@color/colorPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/restaurantImageView"
